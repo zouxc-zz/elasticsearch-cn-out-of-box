@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">  
+<properties>  
+	<comment>IK Analyzer 扩展配置</comment>
+	<!--用户可以在这里配置自己的扩展字典 -->	
+	<entry key="ext_dict">custom/mydict.dic;custom/single_word_low_freq.dic;custom/sougou.dic;custom/bendimingxing.dic;custom/buchong.dic;custom/cehui.dic;custom/chengyu.dic;custom/chengyusuyu.dic;custom/dianzixue.dic;custom/diming.dic;custom/dizhixue.dic;custom/fojiaocihui.dic;custom/guowaimingxing.dic;custom/haiyangkexue.dic;custom/huaxue.dic;custom/jianzhuchengshi.dic;custom/jinyongrenming.dic;custom/jisuanjimingci.dic;custom/jixiechuanye.dic;custom/jixiegongcheng.dic;custom/lishimingren.dic;custom/majiangci.dic;custom/nongyexue.dic;custom/shengwu.dic;custom/shengwuwuli.dic;custom/shicizuozhe.dic;custom/shuxue.dic;custom/tangshisongci.dic;custom/tianwen.dic;custom/wuli.dic;custom/xinlixue.dic;custom/xiyoujirenwu.dic;custom/yejin.dic;custom/yixue.dic;custom/zhongyaocai.dic;custom/zuijinliuxingyu.dic;custom/zuqiumingxing.dic</entry> 	
+	 <!--用户可以在这里配置自己的扩展停止词字典-->
+	<entry key="ext_stopwords">custom/ext_stopword.dic</entry> 	
+</properties>
