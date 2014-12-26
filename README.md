@@ -5,7 +5,7 @@ elasticsearch-cn-out-of-box
 
 ======
 
-* [elasticsearch](http://www.elasticsearch.org/) 1.4.2
+* [elasticsearch](http://www.elasticsearch.org/) 1.3.7
 * [servicewrapper](https://github.com/elasticsearch/elasticsearch-servicewrapper) 0.90
 ## 站点插件:
 
@@ -18,7 +18,7 @@ elasticsearch-cn-out-of-box
 
 ## 分词插件
 
-* [analysis-smartcn](https://github.com/elasticsearch/elasticsearch-analysis-smartcn) 2.4.2
+* [analysis-smartcn](https://github.com/elasticsearch/elasticsearch-analysis-smartcn) 2.3.1
 * [analysis-mmseg](https://github.com/medcl/elasticsearch-analysis-mmseg) 1.2.2
 * [analysis-ik](https://github.com/medcl/elasticsearch-analysis-ik) 1.2.9
 * [analysis-stconvert](https://github.com/medcl/elasticsearch-analysis-stconvert) 1.3.0
@@ -30,4 +30,3 @@ elasticsearch-cn-out-of-box
 ## 其他插件
 
 *  [mapper-attachments](https://github.com/elasticsearch/elasticsearch-mapper-attachments) 2.4.1
-*  [skywalker](https://github.com/jprante/elasticsearch-skywalker) 1.0.0.RC1
