@@ -1,12 +1,12 @@
 elasticsearch-cn-out-of-box
-======
+------
 
 为elasticsearch集成一些实用插件以及配置的开箱即用的版本。
 
-------
+======
 
 * [elasticsearch](http://www.elasticsearch.org/) 1.4.2
-
+* [servicewrapper](https://github.com/elasticsearch/elasticsearch-servicewrapper) 0.90
 ## 站点插件:
 
 * [bigdesk](http://bigdesk.org/) 2.5.0
