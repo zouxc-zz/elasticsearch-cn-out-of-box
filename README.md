@@ -16,6 +16,7 @@ elasticsearch-cn-out-of-box
 * [segmentspy](https://github.com/polyfractal/elasticsearch-segmentspy)
 * [inquisitor](https://github.com/polyfractal/elasticsearch-inquisitor)
 * [paramedic](https://github.com/karmi/elasticsearch-paramedic) 
+* [hq](http://www.elastichq.org/) 
 
 ## 分词插件
 

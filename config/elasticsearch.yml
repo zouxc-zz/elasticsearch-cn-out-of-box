@@ -4,7 +4,7 @@ cluster.name: "cn-out-of-box"
 # 节点名
 node.name: "node1"
 # 是否有资格成为主节点
-node.master: false
+node.master: true
 # 是否存储索引数据
 node.data: true
 # 默认索引分片数
@@ -14,7 +14,7 @@ index.number_of_replicas: 0
 # 临时文件存储路路径
 path.work: "/tmp/elasticsearch"
 # 日志文件存储路路径
-path.logs:  "/var/log/elasticsearch/logs"
+#path.logs:  "/var/log/elasticsearch/logs"
 # tcp传输端口
 transport.tcp.port: 9300
 # 是否压缩tcp传输数据
