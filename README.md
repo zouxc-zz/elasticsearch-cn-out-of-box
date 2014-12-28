@@ -9,7 +9,7 @@ elasticsearch-cn-out-of-box
 * [servicewrapper](https://github.com/elasticsearch/elasticsearch-servicewrapper) 0.90
 
 ## 站点插件:
-
+* oob
 * [bigdesk](http://bigdesk.org/) 2.5.0
 * [head](http://mobz.github.io/elasticsearch-head/) 
 * [kopf](https://github.com/lmenezes/elasticsearch-kopf) 1.2.5
@@ -32,6 +32,18 @@ elasticsearch-cn-out-of-box
 ## 其他插件
 
 *  [mapper-attachments](https://github.com/elasticsearch/elasticsearch-mapper-attachments) 2.4.1
+
+## 为 inquisitor 插件增加自定义分析器的预览等
+
+![puglin_oob2](https://raw.githubusercontent.com/hangxin1940/elasticsearch-cn-out-of-box/master/plugin_inquisitor.png)
+
+## 使用方法
+
+浏览器进入插件 `http://localhost:9200/_plugin/oob`
+
+![puglin_oob](https://raw.githubusercontent.com/hangxin1940/elasticsearch-cn-out-of-box/master/puglin_oob.png)
+
+![puglin_oob2](https://raw.githubusercontent.com/hangxin1940/elasticsearch-cn-out-of-box/master/plugin_oob2.png)
 
 ## elasticsearch.yml
 
