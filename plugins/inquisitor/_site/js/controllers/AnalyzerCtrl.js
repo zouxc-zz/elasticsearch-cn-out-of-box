@@ -131,7 +131,7 @@ function AnalyzerCtrl($scope, $http, Analyzer, Data){
         console.log($scope.analyzer.atext);
 
         //first update standard analyzers
-        updateStandardAnalyzers();
+        updateStandardAnalyzers($scope.data.currentIndex);
 
         //then update custom analyzers
         for (index in $scope.analyzer.customAnalyzers){
@@ -180,9 +180,9 @@ function AnalyzerCtrl($scope, $http, Analyzer, Data){
      * These methods are helpers to the Watch section
      */
 
-    function updateStandardAnalyzers() {
+    function updateStandardAnalyzers(index1) {
         for (index in $scope.analyzer.analyzers){
-            $scope.analyzeStandard($scope.analyzer.analyzers[index]);
+            $scope.analyzeStandard($scope.analyzer.analyzers[index], index1);
         }
     }
 
@@ -222,9 +222,9 @@ function AnalyzerCtrl($scope, $http, Analyzer, Data){
      * These functions query ES and perform the actual analysis
      */
 
-    $scope.analyzeStandard = function(analyzer) {
+    $scope.analyzeStandard = function(analyzer, index) {
 
-        var path = $scope.data.host + "/_analyze?analyzer=" + analyzer;
+         var path = $scope.data.host + "/" + index + "/_analyze?analyzer=" + analyzer;
 
         $http.post(path, $scope.analyzer.query)
             .success(function(response){

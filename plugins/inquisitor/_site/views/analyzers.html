@@ -1,8 +1,20 @@
+
 <div class="container-fluid" id="content" style="margin-top:20px" ng-controller="AnalyzerCtrl">
     <div class="row-fluid">
         <div class="span8 offset2">
             <form>
                 <fieldset >
+					<div class="dropdown" ng-controller="DropdownCtrl">
+						<a class="btn dropdown-toggle" ng-cloak>
+							<strong>Index:</strong> {{data.currentIndex}} <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li ng-repeat="(index, choice) in indices">
+								<a ng-click="$parent.data.currentIndex = choice" ng-model="analyzer.query">{{choice}}</a>
+							</li>
+						</ul>
+						 选择index后再输入文本
+					</div>
                     <textarea rows="2" ng-model="analyzer.query">{{analyzer.query}}</textarea><br/>
                 </fieldset>
             </form>

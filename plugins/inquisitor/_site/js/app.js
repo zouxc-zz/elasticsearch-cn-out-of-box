@@ -13,7 +13,48 @@ angular.module('inquisitor.service', [])
     })
     .value('Analyzer', {
         query: 'the quick brown fox',
-        analyzers: ['standard', 'simple', 'whitespace', 'stop', 'keyword', 'pattern', 'snowball'],
+        analyzers: [
+			'index_ansj',
+			'query_ansj',
+			'ik',
+			'ik_max_word',
+			'ik_smart',
+			'mmseg',
+			'mmseg_maxword',
+			'mmseg_complex',
+			'mmseg_simple',
+			'pinyin_ngram_analyzer',
+			'pinyin_first_letter_analyzer',
+			'pinyin_first_letter_keyword_analyzer',
+			's2t_convert',
+			't2s_convert',
+			's2t_keep_both_convert',
+			't2s_keep_both_convert',
+			'smartcn',
+			'combo',
+			'lowercase_keyword',
+			'lowercase_keyword_ngram_min_size1',
+			'lowercase_keyword_ngram_min_size2',
+			'lowercase_keyword_ngram_min_size3',
+			'lowercase_keyword_ngram',
+			'lowercase_keyword_without_standard',
+			'lowercase_whitespace',		
+			'comma_spliter',
+			'pct_spliter',
+			'custom_snowball_analyzer',
+			'simple_english_analyzer',
+			'edge_ngram',
+			'stconvert',
+			'path_analyzer',
+			'uax_url_email',
+			'standard', 
+			'simple', 
+			'whitespace', 
+			'stop',
+			 'keyword', 
+			 'pattern',
+			  'snowball'
+		],
         customAnalyzers: {},
         fields: {},
         currentField: {},
@@ -21,7 +62,33 @@ angular.module('inquisitor.service', [])
     })
     .value('Tokenizer', {
         query: 'the quick brown fox',
-        tokenizers: ['standard', 'keyword', 'edgeNGram', 'nGram', 'letter', 'lowercase', 'whitespace', 'uax_url_email', 'path_hierarchy'],
+        tokenizers: [
+		  'my_pinyin',
+		  'pinyin_first_letter',
+		  'mmseg_simple',
+		  'index_ansj_token',
+		  'query_ansj_token',
+		  'mmseg_complex',
+		  'mmseg_maxword',
+		  's2t_convert',
+		  't2s_convert',
+		  's2t_keep_both_convert',
+		  't2s_keep_both_convert',
+		  'semicolon_spliter',
+		  'pct_spliter',
+		  'ngram_1_to_2',
+		  'ngram_1_to_3',
+		  'standard',
+		  'keyword', 
+		  'edgeNGram', 
+		  'nGram', 
+		  'letter', 
+		  'lowercase', 
+		  'whitespace', 
+		  'uax_url_email', 
+		  'path_hierarchy'
+
+        ],
         ttext: {}
     })
     .value('Filter', {
@@ -29,7 +96,7 @@ angular.module('inquisitor.service', [])
         filters: ['standard', 'asciifolding', 'length', 'lowercase', 'nGram', 'edgeNGram',
                     'porterStem', 'shingle', 'stop', 'word_delimiter', 'stemmer','keyword_marker',
                     'kstem', 'snowball', 'phonetic', 'synonym', 'dictionary_decompounder', 'hyphenation_decompounder',
-                    'reverse', 'elision', 'truncate', 'unique', 'trim'],
+                    'reverse', 'elision', 'truncate', 'unique', 'trim','ngram_min_3','min2_length','pinyin_first_letter'],
         ftext: {}
     });
 

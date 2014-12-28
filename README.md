@@ -5,7 +5,7 @@ elasticsearch-cn-out-of-box
 
 ======
 
-* [elasticsearch](http://www.elasticsearch.org/) 1.3.7
+* [elasticsearch](http://www.elasticsearch.org/) 1.4.2
 * [servicewrapper](https://github.com/elasticsearch/elasticsearch-servicewrapper) 0.90
 
 ## 站点插件:
@@ -42,17 +42,17 @@ cluster.name: "cn-out-of-box"
 # 节点名
 node.name: "node1"
 # 是否有资格成为主节点
-node.master: false
+node.master: true
 # 是否存储索引数据
 node.data: true
 # 默认索引分片数
-index.number_of_shards: 1
+index.number_of_shards: 3
 # 默认索引副本数
-index.number_of_replicas: 0
+index.number_of_replicas: 1
 # 临时文件存储路路径
-path.work: "/tmp/elasticsearch"
+#path.work: "/tmp/elasticsearch"
 # 日志文件存储路路径
-path.logs:  "/var/log/elasticsearch/logs"
+#path.logs:  "/var/log/elasticsearch/logs"
 # tcp传输端口
 transport.tcp.port: 9300
 # 是否压缩tcp传输数据
@@ -83,6 +83,18 @@ index:
   
     # 分词器配置  
     tokenizer:
+
+      index_ansj_token:
+        type: ansj_index_token
+        is_name: false
+        is_num: false
+        is_quantifier: false
+
+      query_ansj_token:
+        type: ansj_query_token
+        is_name: false
+        is_num: false
+        is_quantifier: false
 
 # ======== analysis-pinyin ========
       # 完整拼音
@@ -401,18 +413,18 @@ index:
         convert_type: t2s
         
    
-      string2int:
-        type: org.elasticsearch.index.analysis.String2IntAnalyzerProvider
+      #string2int:
+        #type: org.elasticsearch.index.analysis.String2IntAnalyzerProvider
         # redis_server: 127.0.0.1
         # redis_port: 6379
         # redis_key: index1_type1_name1
         
-      custom_string2int:
-        type: custom
-        tokenizer: whitespace
-        filter:
-        - my_string2int
-        - lowercase
+      #custom_string2int:
+        #type: custom
+        #tokenizer: whitespace
+        #filter:
+        #- string2int
+        #- lowercase
        
       # 路径分析
       path_analyzer: 
@@ -430,7 +442,7 @@ index:
         #is_name: false
         # s_num: true 
         #is_quantifier: true
-        #redis:
+        redis: false
           #pool:
             #maxactive: 20
            # maxidle: 10
@@ -449,7 +461,7 @@ index:
         #is_name: false
         # is_num: true
         # is_quantifier: true
-        #redis:
+        redis: false
           #pool:
             #maxactive: 20
            # maxidle: 10
@@ -470,8 +482,9 @@ index:
          - ik_smart
          - mmseg_complex
          - uax_url_email
-         - t2s_keep_both_convert
-         - s2t_keep_both_convert
+         - s2t_convert
+         - t2s_convert
+         - smartcn
          - simple_english_analyzer
 
 # 默认分析器
