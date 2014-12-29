@@ -31,6 +31,7 @@ elasticsearch-cn-out-of-box
 
 ## 其他插件
 
+*  [jetty](https://github.com/sonian/elasticsearch-jetty) oob-1.4.2
 *  [mapper-attachments](https://github.com/elasticsearch/elasticsearch-mapper-attachments) 2.4.1
 
 ## 为 inquisitor 插件增加自定义分析器的预览等
