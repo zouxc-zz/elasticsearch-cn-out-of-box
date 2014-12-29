@@ -73,7 +73,7 @@ transport.tcp.compress: true
 # http端口
 http.port: 9200
 # 是否开启http服务
-http.enabled: true
+#http.enabled: true
 # 是否打开多播发现节点
 discovery.zen.ping.multicast.enabled: true
 
@@ -87,6 +87,22 @@ discovery.zen.ping.multicast.enabled: true
 #index.search.slowlog.threshold.fetch.info: 800ms
 #index.search.slowlog.threshold.fetch.debug: 500ms
 #index.search.slowlog.threshold.fetch.trace: 200ms
+
+
+# 启用jetty插件提供http服务
+http.type: com.sonian.elasticsearch.http.jetty.JettyHttpServerTransport
+
+
+# sonian.elasticsearch.http.jetty:
+    # ==== 开启 https
+    #ssl_port: 9443
+    #config: jetty.xml,jetty-ssl.xml, jetty-gzip.xml
+    #keystore_password: "OBF:1nc01vuz1w8f1w1c1rbu1rac1w261w9b1vub1ndq"
+    
+    # ==== 开启用户认证
+    # config: jetty.xml,jetty-hash-auth.xml,jetty-restrict-all.xml
+    
+    
 
 # 索引配置
 index:
